@@ -1,0 +1,29 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  margin-left: 3rem;
+  margin-right: 3rem;
+}
+.Card {
+  border: #000055 10px solid;
+  background: #005;
+  color: white;
+  border-radius: 10px;
+  margin: 15px 10px;
+}
+.settitle {
+  padding-left: 0.5rem;
+  display: flex;
+  justify-content: flex-start;
+}
+.itemsGrid {
+  display: flex;
+  overflow-x: scroll;
+  flex-wrap: nowrap;
+}
+.Title {
+  font-size: 3rem;
+}
+.Answer {
+  font-size: 1.5rem;
+}
