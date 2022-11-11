@@ -1,9 +1,11 @@
 import "./styles.css";
 
 import { useState } from "react";
-import { data, setName } from "./data";
 import Card from "./Card";
-localStorage.setItem('current-user-flashcards', JSON.stringify(data))
+import { data, setName } from "./data";
+if (localStorage.getItem('current-user-flashcards') === null) {
+  localStorage.setItem('current-user-flashcards', JSON.stringify(data))
+}
 export default function App() {
   const [cardNumber, setCardNumber] = useState(0);
   const [answerShown, showAnswer] = useState(false);
