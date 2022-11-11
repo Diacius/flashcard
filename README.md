@@ -1,2 +1,2 @@
 # flashcard
-Created with CodeSandbox
+A basic flashcard app. Custom flashcards are work in progress
