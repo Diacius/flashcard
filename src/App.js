@@ -4,7 +4,10 @@ import { useState } from "react";
 import Card from "./Card";
 import { data, setName } from "./data";
 if (localStorage.getItem('current-user-flashcards') === null) {
-  localStorage.setItem('current-user-flashcards', JSON.stringify(data))
+  localStorage.setItem('current-user-flashcards', JSON.stringify(data));
+}
+else {
+  data = localStorage.getItem('current-user-flashcards');
 }
 export default function App() {
   const [cardNumber, setCardNumber] = useState(0);
