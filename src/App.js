@@ -6,9 +6,7 @@ import { data, setName } from "./data";
 if (localStorage.getItem('current-user-flashcards') === null) {
   localStorage.setItem('current-user-flashcards', JSON.stringify(data));
 }
-else {
-  data = localStorage.getItem('current-user-flashcards');
-}
+var cardData = JSON.parse(localStorage.getItem('current-user-flashcards'));
 export default function App() {
   const [cardNumber, setCardNumber] = useState(0);
   const [answerShown, showAnswer] = useState(false);
@@ -25,8 +23,8 @@ export default function App() {
       <div onClick={toggleAnswer}>
         <Card
           key={cardNumber}
-          title={data[cardNumber].title}
-          content={data[cardNumber].content}
+          title={cardData[cardNumber].title}
+          content={cardData[cardNumber].content}
           cardAnswerShown={answerShown}
         />
       </div>
