@@ -7,11 +7,16 @@ import {
 } from "react-router-dom";
 
 import App from "./App";
+import Editor from "./Editor";
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App/>,
   },
+  {
+    path: "/editor",
+    element: <Editor/>
+  }
 ]);
 const rootElement = document.getElementById("root");
 const root = createRoot(rootElement);
