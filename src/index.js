@@ -12,6 +12,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <App/>,
+    errorElement: <h1>404 Error</h1>
   },
   {
     path: "/editor",
